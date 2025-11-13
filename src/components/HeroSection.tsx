@@ -26,13 +26,13 @@ export const HeroSection = () => {
           <img 
             src={claraLogo} 
             alt="Clara" 
-            className="h-8 md:h-12 w-auto"
+            className="h-8 md:h-14 lg:h-16 w-auto"
           />
-          <span className="text-3xl md:text-4xl font-light text-foreground">×</span>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-light text-foreground">×</span>
           <img 
             src={londonBuildLogo} 
             alt="London Build 2025 Expo - 19-20 November, Olympia London" 
-            className="h-16 md:h-24 w-auto"
+            className="h-16 md:h-28 lg:h-32 w-auto"
           />
         </div>
       </div>
