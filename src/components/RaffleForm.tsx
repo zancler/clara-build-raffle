@@ -95,7 +95,7 @@ export const RaffleForm = () => {
             placeholder="mail@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-500 ease-out focus:outline-none relative z-10 rounded-xl"
+            className="h-14 text-[16px] bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] placeholder:text-[16px] transition-all duration-500 ease-out focus:outline-none relative z-10 rounded-xl"
             style={{
               backgroundClip: 'padding-box',
             }}
@@ -163,7 +163,7 @@ export const RaffleForm = () => {
         <Button 
           ref={buttonRef}
           type="submit" 
-          className="relative h-14 text-base font-medium w-auto bg-black hover:bg-black text-white rounded-full transition-all duration-200 px-8"
+          className="relative h-14 text-[16px] font-medium w-auto bg-black hover:bg-black text-white rounded-full transition-all duration-200 px-8"
           disabled={isSubmitting}
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
