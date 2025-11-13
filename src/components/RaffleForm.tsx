@@ -118,7 +118,7 @@ export const RaffleForm = () => {
         </p>
       </div>
 
-      <p className="text-xs text-[#181D27] pt-4">
+      <p className="text-xs text-[#181D27] pt-6">
         By entering, you agree to the raffle{" "}
         <a 
           href="#terms" 
