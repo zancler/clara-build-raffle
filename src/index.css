@@ -107,6 +107,10 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
+  
+  .input-focused .input-gradient-border {
+    opacity: 1;
+  }
 
   body {
     @apply bg-background text-foreground;
