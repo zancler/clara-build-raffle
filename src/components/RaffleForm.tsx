@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,6 +8,9 @@ import { ArrowRight } from "lucide-react";
 export const RaffleForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const { toast } = useToast();
 
   const validateEmail = (email: string): boolean => {
@@ -60,6 +63,25 @@ export const RaffleForm = () => {
     }, 1000);
   };
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!buttonRef.current) return;
+    
+    const rect = buttonRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+    const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+    
+    setMousePosition({ x, y });
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setMousePosition({ x: 0, y: 0 });
+  };
+
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
       <div className="space-y-2">
@@ -107,16 +129,53 @@ export const RaffleForm = () => {
         .
       </p>
 
-      <Button 
-        type="submit" 
-        variant="pill"
-        size="lg"
-        className="h-14 text-base font-medium w-full bg-[#181D27] hover:bg-[#181D27]/90 text-white transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? "Entering..." : "Enter the raffle"}
-        <ArrowRight className="w-5 h-5 ml-2" />
-      </Button>
+      <div className="relative w-full">
+        {/* Colored layers */}
+        <div
+          className="absolute inset-0 rounded-full bg-[#FECE00] transition-all duration-200 ease-out pointer-events-none"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            transform: `rotate(${4 + mousePosition.x * 2}deg) translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+            mixBlendMode: 'darken',
+            zIndex: 1,
+          }}
+        />
+        <div
+          className="absolute inset-0 rounded-full bg-[#00C6CF] transition-all duration-200 ease-out pointer-events-none"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            transform: `rotate(${-2 - mousePosition.y * 2}deg) translate(${-mousePosition.x}px, ${mousePosition.y}px)`,
+            mixBlendMode: 'darken',
+            zIndex: 2,
+          }}
+        />
+        <div
+          className="absolute inset-0 rounded-full bg-[#FF33F1] transition-all duration-200 ease-out pointer-events-none"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            transform: `rotate(${2 + mousePosition.y * 2}deg) translate(${mousePosition.x}px, ${-mousePosition.y}px)`,
+            mixBlendMode: 'darken',
+            zIndex: 3,
+          }}
+        />
+        
+        {/* Main button */}
+        <Button 
+          ref={buttonRef}
+          type="submit" 
+          className="relative h-14 text-base font-semibold w-full bg-black hover:bg-black text-white rounded-full transition-all duration-200 px-5 sm:px-6 md:px-8"
+          disabled={isSubmitting}
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            zIndex: 10,
+          }}
+        >
+          {isSubmitting ? "Entering..." : "Enter the raffle"}
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Button>
+      </div>
     </form>
   );
 };
