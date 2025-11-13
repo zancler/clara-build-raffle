@@ -95,7 +95,7 @@ export const RaffleForm = () => {
             placeholder="mail@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-200 focus:outline-none relative z-10 rounded-lg"
+            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-200 focus:outline-none relative z-10 rounded-xl"
             style={{
               backgroundClip: 'padding-box',
             }}
@@ -108,9 +108,9 @@ export const RaffleForm = () => {
                style={{
                  background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
                  padding: '2px',
-                 borderRadius: '0.5rem',
+                 borderRadius: '0.75rem',
                }}>
-            <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.5rem - 2px)' }}></div>
+            <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.75rem - 2px)' }}></div>
           </div>
         </div>
         <p className="text-xs text-[#979797]">
