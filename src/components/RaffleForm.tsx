@@ -95,7 +95,7 @@ export const RaffleForm = () => {
             placeholder="mail@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-200 focus:outline-none relative z-10 rounded-xl"
+            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-300 ease-in-out focus:outline-none relative z-10 rounded-xl"
             style={{
               backgroundClip: 'padding-box',
             }}
@@ -104,7 +104,7 @@ export const RaffleForm = () => {
             onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
             onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
           />
-          <div className="absolute inset-0 opacity-0 transition-opacity duration-200 pointer-events-none input-gradient-border" 
+          <div className="absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out pointer-events-none input-gradient-border" 
                style={{
                  background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
                  padding: '2px',
