@@ -72,7 +72,7 @@ export const RaffleForm = () => {
           placeholder="mail@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="h-12 text-base border-2 border-input focus:border-input focus:ring-input placeholder:text-[#B0B2B6]"
+          className="h-12 text-base border-2 border-[#E5E7EB] focus:border-clara-cyan focus:ring-2 focus:ring-clara-cyan/20 placeholder:text-[#B0B2B6] transition-all duration-200"
           required
           maxLength={255}
         />
