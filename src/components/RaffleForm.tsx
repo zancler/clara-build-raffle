@@ -118,7 +118,7 @@ export const RaffleForm = () => {
         </p>
       </div>
 
-      <p className="text-xs text-[#181D27]">
+      <p className="text-xs text-[#181D27] pt-4">
         By entering, you agree to the raffle{" "}
         <a 
           href="#terms" 
@@ -129,7 +129,7 @@ export const RaffleForm = () => {
         .
       </p>
 
-      <div className="relative w-full">
+      <div className="relative w-auto inline-block">
         {/* Colored layers */}
         <div
           className="absolute inset-0 rounded-full bg-[#FECE00] transition-all duration-200 ease-out pointer-events-none"
@@ -163,7 +163,7 @@ export const RaffleForm = () => {
         <Button 
           ref={buttonRef}
           type="submit" 
-          className="relative h-14 text-base font-semibold w-full bg-black hover:bg-black text-white rounded-full transition-all duration-200 px-5 sm:px-6 md:px-8"
+          className="relative h-14 text-base font-medium w-auto bg-black hover:bg-black text-white rounded-full transition-all duration-200 px-8"
           disabled={isSubmitting}
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
