@@ -95,7 +95,7 @@ export const RaffleForm = () => {
             placeholder="mail@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-200 focus:outline-none relative z-10 rounded-lg"
+            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] transition-all duration-200 focus:outline-none relative z-10 rounded-lg"
             style={{
               backgroundClip: 'padding-box',
             }}
