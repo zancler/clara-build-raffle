@@ -66,16 +66,31 @@ export const RaffleForm = () => {
         <Label htmlFor="email" className="text-[20px] font-normal text-[#181D27]">
           Your email address <span className="text-destructive">*</span>
         </Label>
-        <Input
-          id="email"
-          type="email"
-          placeholder="mail@gmail.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="h-12 text-base border-2 border-[#E5E7EB] focus:border-clara-cyan focus:ring-2 focus:ring-clara-cyan/20 placeholder:text-[#B0B2B6] transition-all duration-200"
-          required
-          maxLength={255}
-        />
+        <div className="relative">
+          <Input
+            id="email"
+            type="email"
+            placeholder="mail@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="h-12 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent placeholder:text-[#B0B2B6] transition-all duration-200 focus:shadow-[0_0_0_2px_transparent] focus:outline-none relative z-10"
+            style={{
+              backgroundClip: 'padding-box',
+            }}
+            required
+            maxLength={255}
+            onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
+            onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
+          />
+          <div className="absolute inset-0 rounded-md opacity-0 transition-opacity duration-200 pointer-events-none input-gradient-border" 
+               style={{
+                 background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
+                 padding: '2px',
+                 borderRadius: '0.375rem',
+               }}>
+            <div className="w-full h-full bg-white rounded-[calc(0.375rem-2px)]"></div>
+          </div>
+        </div>
         <p className="text-xs text-[#979797]">
           We'll only use your email to contact you about the raffle and Clara. No spam, ever.
         </p>
