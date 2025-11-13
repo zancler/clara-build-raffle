@@ -10,13 +10,13 @@ export const HeroSection = () => {
       <img 
         src={leftLine} 
         alt="" 
-        className="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block md:w-40 lg:w-60 h-auto md:-translate-x-4 lg:-translate-x-8"
+        className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 w-32 h-auto md:left-0 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:w-40 lg:w-60 md:-translate-x-4 lg:-translate-x-8"
         aria-hidden="true"
       />
       <img 
         src={rightLine} 
         alt="" 
-        className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block md:w-48 lg:w-80 h-auto md:translate-x-4 lg:translate-x-8"
+        className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-40 h-auto md:left-auto md:right-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 md:translate-x-4 md:w-48 lg:w-80 lg:translate-x-8"
         aria-hidden="true"
       />
 
