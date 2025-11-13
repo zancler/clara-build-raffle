@@ -73,7 +73,7 @@ export const RaffleForm = () => {
             placeholder="mail@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent placeholder:text-[#B0B2B6] transition-all duration-200 focus:shadow-[0_0_0_2px_transparent] focus:outline-none relative z-10"
+            className="h-12 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent placeholder:text-[#B0B2B6] transition-all duration-200 focus:outline-none relative z-10 rounded-lg"
             style={{
               backgroundClip: 'padding-box',
             }}
@@ -82,13 +82,13 @@ export const RaffleForm = () => {
             onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
             onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
           />
-          <div className="absolute inset-0 rounded-md opacity-0 transition-opacity duration-200 pointer-events-none input-gradient-border" 
+          <div className="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-200 pointer-events-none input-gradient-border" 
                style={{
                  background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
                  padding: '2px',
-                 borderRadius: '0.375rem',
+                 borderRadius: '0.5rem',
                }}>
-            <div className="w-full h-full bg-white rounded-[calc(0.375rem-2px)]"></div>
+            <div className="w-full h-full bg-white rounded-[calc(0.5rem-2px)]"></div>
           </div>
         </div>
         <p className="text-xs text-[#979797]">
@@ -111,7 +111,7 @@ export const RaffleForm = () => {
         type="submit" 
         variant="pill"
         size="lg"
-        className="h-14 text-base font-medium w-auto px-8 bg-[#181D27] hover:bg-[#181D27]/90 text-white transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+        className="h-14 text-base font-medium w-full bg-[#181D27] hover:bg-[#181D27]/90 text-white transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Entering..." : "Enter the raffle"}
