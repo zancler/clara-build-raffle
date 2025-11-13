@@ -41,6 +41,10 @@ All colors MUST be HSL.
     --clara-green: 142 76% 36%;
     --clara-yellow: 45 100% 51%;
 
+    --text-primary: 220 24% 13%;
+    --text-placeholder: 220 6% 70%;
+    --text-helper: 0 0% 59%;
+
     --radius: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
