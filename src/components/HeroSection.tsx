@@ -1,35 +1,22 @@
 import claraLogo from "@/assets/clara-logo.png";
 import londonBuildLogo from "@/assets/london-build-logo.png";
-import swooshCyan from "@/assets/swoosh-cyan.png";
-import swooshMagenta from "@/assets/swoosh-magenta.png";
-import swooshGreen from "@/assets/swoosh-green.png";
+import leftLine from "@/assets/left_line.svg";
+import rightLine from "@/assets/right_line.svg";
 
 export const HeroSection = () => {
   return (
-    <header className="relative bg-background border-b border-border overflow-hidden">
-      {/* Decorative Swooshes */}
+    <header className="relative bg-white border-b border-border overflow-hidden">
+      {/* Decorative Lines */}
       <img 
-        src={swooshCyan} 
+        src={leftLine} 
         alt="" 
-        className="absolute left-0 top-0 w-64 h-64 object-contain opacity-60 -translate-x-16 -translate-y-8"
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-48 md:w-60 h-auto -translate-x-8"
         aria-hidden="true"
       />
       <img 
-        src={swooshMagenta} 
+        src={rightLine} 
         alt="" 
-        className="absolute left-20 top-8 w-48 h-48 object-contain opacity-50 rotate-45"
-        aria-hidden="true"
-      />
-      <img 
-        src={swooshGreen} 
-        alt="" 
-        className="absolute right-0 top-0 w-64 h-64 object-contain opacity-60 translate-x-16 -translate-y-8"
-        aria-hidden="true"
-      />
-      <img 
-        src={swooshMagenta} 
-        alt="" 
-        className="absolute right-20 top-12 w-56 h-56 object-contain opacity-40 -rotate-12"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-64 md:w-80 h-auto translate-x-8"
         aria-hidden="true"
       />
 
