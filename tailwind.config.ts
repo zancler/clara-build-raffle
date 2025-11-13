@@ -13,8 +13,17 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
+        clara: {
+          cyan: "hsl(var(--clara-cyan))",
+          magenta: "hsl(var(--clara-magenta))",
+          green: "hsl(var(--clara-green))",
+          yellow: "hsl(var(--clara-yellow))",
+        },
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
