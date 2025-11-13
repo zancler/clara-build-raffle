@@ -104,13 +104,13 @@ export const RaffleForm = () => {
             onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
             onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
           />
-          <div className="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-200 pointer-events-none input-gradient-border" 
+          <div className="absolute inset-0 opacity-0 transition-opacity duration-200 pointer-events-none input-gradient-border" 
                style={{
                  background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
                  padding: '2px',
                  borderRadius: '0.5rem',
                }}>
-            <div className="w-full h-full bg-white rounded-[calc(0.5rem-2px)]"></div>
+            <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.5rem - 2px)' }}></div>
           </div>
         </div>
         <p className="text-xs text-[#979797]">
