@@ -24,6 +24,11 @@ export default {
           green: "hsl(var(--clara-green))",
           yellow: "hsl(var(--clara-yellow))",
         },
+        text: {
+          primary: "hsl(var(--text-primary))",
+          placeholder: "hsl(var(--text-placeholder))",
+          helper: "hsl(var(--text-helper))",
+        },
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

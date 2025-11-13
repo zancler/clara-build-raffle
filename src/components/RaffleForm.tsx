@@ -61,9 +61,9 @@ export const RaffleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-6">
+    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
       <div className="space-y-2">
-        <Label htmlFor="email" className="text-base font-medium text-foreground">
+        <Label htmlFor="email" className="text-[20px] font-normal text-[#181D27]">
           Your email address <span className="text-destructive">*</span>
         </Label>
         <Input
@@ -72,20 +72,20 @@ export const RaffleForm = () => {
           placeholder="mail@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="h-12 text-base border-2 border-input focus:border-input focus:ring-input"
+          className="h-12 text-base border-2 border-input focus:border-input focus:ring-input placeholder:text-[#B0B2B6]"
           required
           maxLength={255}
         />
-        <p className="text-sm text-muted-foreground">
+        <p className="text-xs text-[#979797]">
           We'll only use your email to contact you about the raffle and Clara. No spam, ever.
         </p>
       </div>
 
-      <p className="text-sm text-foreground">
+      <p className="text-xs text-[#181D27]">
         By entering, you agree to the raffle{" "}
         <a 
           href="#terms" 
-          className="underline hover:text-accent transition-colors font-medium"
+          className="underline hover:text-accent transition-colors"
         >
           Terms & Conditions
         </a>
@@ -96,7 +96,7 @@ export const RaffleForm = () => {
         type="submit" 
         variant="pill"
         size="lg"
-        className="w-full h-14 text-base"
+        className="h-14 text-base font-medium w-auto px-8 bg-[#181D27] hover:bg-[#181D27]/90 text-white transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Entering..." : "Enter the raffle"}
