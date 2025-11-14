@@ -7,7 +7,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-hero">
       <HeroSection />
       
-      <main className="container mx-auto px-4 py-16 md:py-24">
+      <main className="container mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-24">
         <div className="max-w-2xl mx-auto text-center">
           {/* Block 1: Tag, Headline, Description */}
           <div className="space-y-6 mb-12">
@@ -37,7 +37,17 @@ const Index = () => {
 
           {/* Block 3: Agreement Text */}
           <p className="text-xs font-normal text-black" style={{ fontFamily: 'Figtree' }}>
-            By entering you agree to the raffle terms & conditions.
+            By entering you agree to the raffle{' '}
+            <a 
+              href="#" 
+              className="underline hover:no-underline"
+              onClick={(e) => {
+                e.preventDefault();
+                // Add your terms and conditions logic here
+              }}
+            >
+              Terms and Conditions
+            </a>.
           </p>
         </div>
       </main>
