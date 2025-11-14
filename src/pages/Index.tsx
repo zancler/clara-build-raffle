@@ -7,7 +7,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-hero">
       <HeroSection />
       
-      <main className="container mx-auto px-4 py-16 md:py-24" style={{ marginTop: '-20px' }}>
+      <main className="container mx-auto px-4 py-16 md:py-24 -mt-5 md:-mt-[60px]">
         <div className="max-w-2xl mx-auto text-center">
           {/* Block 1: Tag, Headline, Description */}
           <div className="space-y-6 mb-12">
@@ -31,7 +31,7 @@ const Index = () => {
           </div>
 
           {/* Block 2: Email Section */}
-          <div className="mb-12">
+          <div className="mb-6">
             <RaffleForm />
           </div>
 
