@@ -89,36 +89,38 @@ export const RaffleForm = () => {
         <Label htmlFor="email" className="block text-center text-base font-medium" style={{ fontFamily: 'Figtree' }}>
           Your email address<span className="text-red-500">*</span>
         </Label>
-        <div className="relative">
-          <Input
-            id="email"
-            type="email"
-            placeholder="business.name@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-700 ease-in-out focus:outline-none relative z-10 rounded-xl"
-            style={{
-              fontFamily: 'Figtree',
-              color: '#71717A',
-              backgroundClip: 'padding-box',
-            }}
-            required
-            maxLength={255}
-            onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
-            onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
-          />
-          <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none input-gradient-border" 
-               style={{
-                 background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
-                 padding: '2px',
-                 borderRadius: '0.75rem',
-               }}>
-            <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.75rem - 2px)' }}></div>
+        <div className="space-y-3">
+          <div className="relative">
+            <Input
+              id="email"
+              type="email"
+              placeholder="business.name@gmail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-700 ease-in-out focus:outline-none relative z-10 rounded-xl"
+              style={{
+                fontFamily: 'Figtree',
+                color: '#71717A',
+                backgroundClip: 'padding-box',
+              }}
+              required
+              maxLength={255}
+              onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
+              onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
+            />
+            <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none input-gradient-border" 
+                 style={{
+                   background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
+                   padding: '2px',
+                   borderRadius: '0.75rem',
+                 }}>
+              <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.75rem - 2px)' }}></div>
+            </div>
           </div>
+          <p className="text-xs text-center" style={{ fontFamily: 'Figtree', color: '#71717A' }}>
+            We'll only use your email to contact you about the raffle and Clara. No spam, ever.
+          </p>
         </div>
-        <p className="text-xs text-center" style={{ fontFamily: 'Figtree', color: '#71717A' }}>
-          We'll only use your email to contact you about the raffle and Clara. No spam, ever.
-        </p>
       </div>
 
       <div className="relative w-full mt-12">
