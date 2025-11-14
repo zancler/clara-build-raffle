@@ -126,11 +126,20 @@ export const RaffleForm = () => {
           ref={buttonRef}
           type="submit"
           disabled={isSubmitting}
-          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center bg-black transition-all duration-500"
+          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-all duration-500"
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+          {/* Black background layer - fades out on hover */}
+          <div 
+            className="absolute inset-0 transition-opacity duration-300"
+            style={{
+              background: '#000000',
+              opacity: isHovered ? 0 : 1,
+            }}
+          />
+          
           {/* Yellow layer */}
           <div 
             className="absolute inset-0 transition-all duration-200 ease-out"
