@@ -10,7 +10,7 @@ export const HeroSection = () => {
       <img 
         src={leftLine} 
         alt="" 
-        className="absolute left-0 top-0 -translate-y-1/4 -translate-x-12 w-32 h-auto md:w-40 lg:w-60 md:-translate-x-4 lg:-translate-x-8"
+        className="absolute left-0 top-0 -translate-y-1/2 md:-translate-y-1/4 -translate-x-12 w-32 h-auto md:w-40 lg:w-60 md:-translate-x-4 lg:-translate-x-8"
         aria-hidden="true"
       />
       <img 
