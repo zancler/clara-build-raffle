@@ -111,6 +111,10 @@ All colors MUST be HSL.
   .input-focused .input-gradient-border {
     opacity: 1;
   }
+  
+  .input-wrapper:focus-within .input-gradient-border {
+    opacity: 1;
+  }
 
   body {
     @apply text-foreground;
