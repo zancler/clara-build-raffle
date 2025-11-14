@@ -1,24 +1,44 @@
 import { HeroSection } from "@/components/HeroSection";
 import { RaffleForm } from "@/components/RaffleForm";
+import tagIcon from "@/assets/tag-icon.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-hero">
       <HeroSection />
       
-      <main className="container mx-auto px-4 py-16 md:py-24 bg-white">
-        <div className="max-w-2xl mx-auto space-y-8 text-center">
-          <h1 className="text-[40px] font-semibold text-[#181D27] leading-tight">
-            Clara × London Build Expo
-          </h1>
-          
-          <p className="text-base text-[#181D27] leading-relaxed">
-            Enter our Expo raffle and see how Clara can transform your call handling and lead capture. Leave your email to join the raffle and get a quick follow-up from the Clara team after the show.
-          </p>
+      <main className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-2xl mx-auto text-center">
+          {/* Block 1: Tag, Headline, Description */}
+          <div className="space-y-6 mb-12">
+            {/* Tag */}
+            <div className="inline-flex items-center gap-1 bg-white rounded-full px-4 py-2 shadow-sm">
+              <img src={tagIcon} alt="" className="w-5 h-5" />
+              <span className="font-semibold text-xs text-foreground" style={{ fontFamily: 'Figtree' }}>
+                Available in late 2025
+              </span>
+            </div>
+            
+            {/* Headline */}
+            <h1 className="text-5xl font-semibold text-foreground" style={{ fontFamily: 'Figtree' }}>
+              Clara X London Build Expo
+            </h1>
+            
+            {/* Description */}
+            <p className="text-base font-normal text-foreground" style={{ fontFamily: 'Figtree' }}>
+              Enter the Expo Raffle
+            </p>
+          </div>
 
-          <div className="pt-8">
+          {/* Block 2: Email Section */}
+          <div className="mb-12">
             <RaffleForm />
           </div>
+
+          {/* Block 3: Agreement Text */}
+          <p className="text-xs font-normal text-black" style={{ fontFamily: 'Figtree' }}>
+            By entering you agree to the raffle terms & conditions.
+          </p>
         </div>
       </main>
     </div>

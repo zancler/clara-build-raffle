@@ -84,19 +84,21 @@ export const RaffleForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-6 flex flex-col items-center">
-      <div className="space-y-2 w-full">
-        <Label htmlFor="email" className="text-[20px] font-normal text-[#181D27] block text-center">
-          Your email address <span className="text-destructive">*</span>
+      <div className="w-full space-y-6">
+        <Label htmlFor="email" className="block text-center text-base font-medium" style={{ fontFamily: 'Figtree' }}>
+          Your email address
         </Label>
         <div className="relative">
           <Input
             id="email"
             type="email"
-            placeholder="mail@gmail.com"
+            placeholder="business.name@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-14 text-[16px] bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#B0B2B6] placeholder:text-[16px] transition-all duration-500 ease-out focus:outline-none relative z-10 rounded-xl"
+            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-500 ease-out focus:outline-none relative z-10 rounded-xl"
             style={{
+              fontFamily: 'Figtree',
+              color: '#71717A',
               backgroundClip: 'padding-box',
             }}
             required
@@ -113,68 +115,9 @@ export const RaffleForm = () => {
             <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.75rem - 2px)' }}></div>
           </div>
         </div>
-        <p className="text-xs text-[#979797] text-center">
+        <p className="text-xs text-center" style={{ fontFamily: 'Figtree', color: '#71717A' }}>
           We'll only use your email to contact you about the raffle and Clara. No spam, ever.
         </p>
-      </div>
-
-      <p className="text-xs text-[#181D27] pt-10 text-center">
-        By entering, you agree to the raffle{" "}
-        <a 
-          href="#terms" 
-          className="underline hover:text-accent transition-colors"
-        >
-          Terms & Conditions
-        </a>
-        .
-      </p>
-
-      <div className="relative w-auto">
-        {/* Colored layers */}
-        <div
-          className="absolute inset-0 rounded-full bg-[#FECE00] transition-all duration-200 ease-out pointer-events-none"
-          style={{
-            opacity: isHovered ? 1 : 0,
-            transform: `rotate(${4 + mousePosition.x * 2}deg) translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-            mixBlendMode: 'darken',
-            zIndex: 1,
-          }}
-        />
-        <div
-          className="absolute inset-0 rounded-full bg-[#00C6CF] transition-all duration-200 ease-out pointer-events-none"
-          style={{
-            opacity: isHovered ? 1 : 0,
-            transform: `rotate(${-2 - mousePosition.y * 2}deg) translate(${-mousePosition.x}px, ${mousePosition.y}px)`,
-            mixBlendMode: 'darken',
-            zIndex: 2,
-          }}
-        />
-        <div
-          className="absolute inset-0 rounded-full bg-[#FF33F1] transition-all duration-200 ease-out pointer-events-none"
-          style={{
-            opacity: isHovered ? 1 : 0,
-            transform: `rotate(${2 + mousePosition.y * 2}deg) translate(${mousePosition.x}px, ${-mousePosition.y}px)`,
-            mixBlendMode: 'darken',
-            zIndex: 3,
-          }}
-        />
-        
-        {/* Main button */}
-        <Button 
-          ref={buttonRef}
-          type="submit" 
-          className="relative h-14 text-[16px] font-medium w-auto bg-black hover:bg-black text-white rounded-full transition-all duration-200 px-8"
-          disabled={isSubmitting}
-          onMouseMove={handleMouseMove}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            zIndex: 10,
-          }}
-        >
-          {isSubmitting ? "Entering..." : "Enter the raffle"}
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Button>
       </div>
     </form>
   );
