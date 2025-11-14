@@ -125,37 +125,16 @@ export const RaffleForm = () => {
           ref={buttonRef}
           type="submit"
           disabled={isSubmitting}
-          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center bg-black transition-all duration-300 hover:bg-transparent"
+          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-all duration-500"
+          style={{
+            background: isHovered 
+              ? 'linear-gradient(135deg, #00BFD8 0%, #E63888 50%, #82CA9C 100%)'
+              : '#000000'
+          }}
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {/* Animated background layers - only visible on hover */}
-          <div 
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{
-              background: '#00BFD8'
-            }}
-          />
-          <div 
-            className="absolute inset-0 opacity-0 group-hover:opacity-80 transition-all duration-300"
-            style={{
-              background: '#E63888',
-              transform: isHovered 
-                ? `translate(${(mousePosition.x) * 10}px, ${(mousePosition.y) * 10}px)` 
-                : 'translate(0, 0)',
-            }}
-          />
-          <div 
-            className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-all duration-500"
-            style={{
-              background: '#82CA9C',
-              transform: isHovered 
-                ? `translate(${(mousePosition.x) * 15}px, ${(mousePosition.y) * 15}px)` 
-                : 'translate(0, 0)',
-            }}
-          />
-          
           {/* Button content */}
           <div className="relative z-10 flex items-center gap-2 text-white">
             <span className="text-base font-medium" style={{ fontFamily: 'Figtree' }}>
