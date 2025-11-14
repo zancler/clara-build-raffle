@@ -5,7 +5,7 @@ import rightLine from "@/assets/right_line.svg";
 
 export const HeroSection = () => {
   return (
-    <header className="relative bg-white border-b border-border overflow-hidden">
+    <header className="relative bg-background border-b border-border overflow-hidden">
       {/* Decorative Lines */}
       <img 
         src={leftLine} 
@@ -21,7 +21,7 @@ export const HeroSection = () => {
       />
 
       {/* Main Content */}
-      <div className="relative container mx-auto px-4 py-8 md:py-12">
+      <div className="relative container mx-auto px-4 py-8 md:py-12 text-center">
         <div className="flex items-center justify-center gap-6 md:gap-12 flex-wrap">
           <img 
             src={claraLogo} 
