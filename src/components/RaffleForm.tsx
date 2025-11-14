@@ -84,7 +84,7 @@ export const RaffleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-6 flex flex-col items-center">
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto flex flex-col items-center">
       <div className="w-full space-y-6">
         <Label htmlFor="email" className="block text-center text-base font-medium" style={{ fontFamily: 'Figtree' }}>
           Your email address<span className="text-red-500">*</span>
