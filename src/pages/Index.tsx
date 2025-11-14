@@ -31,7 +31,7 @@ const Index = () => {
           </div>
 
           {/* Block 2: Email Section */}
-          <div className="mb-6">
+          <div className="mb-3">
             <RaffleForm />
           </div>
 
@@ -46,7 +46,7 @@ const Index = () => {
                 // Add your terms and conditions logic here
               }}
             >
-              Terms and Conditions
+              Terms & Conditions
             </a>.
           </p>
         </div>
