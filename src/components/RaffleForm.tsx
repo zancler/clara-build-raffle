@@ -83,9 +83,9 @@ export const RaffleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
-      <div className="space-y-2">
-        <Label htmlFor="email" className="text-[20px] font-normal text-[#181D27]">
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-6 flex flex-col items-center">
+      <div className="space-y-2 w-full">
+        <Label htmlFor="email" className="text-[20px] font-normal text-[#181D27] block text-center">
           Your email address <span className="text-destructive">*</span>
         </Label>
         <div className="relative">
@@ -113,12 +113,12 @@ export const RaffleForm = () => {
             <div className="w-full h-full bg-white" style={{ borderRadius: 'calc(0.75rem - 2px)' }}></div>
           </div>
         </div>
-        <p className="text-xs text-[#979797]">
+        <p className="text-xs text-[#979797] text-center">
           We'll only use your email to contact you about the raffle and Clara. No spam, ever.
         </p>
       </div>
 
-      <p className="text-xs text-[#181D27] pt-10">
+      <p className="text-xs text-[#181D27] pt-10 text-center">
         By entering, you agree to the raffle{" "}
         <a 
           href="#terms" 
@@ -129,7 +129,7 @@ export const RaffleForm = () => {
         .
       </p>
 
-      <div className="relative w-auto inline-block">
+      <div className="relative w-auto">
         {/* Colored layers */}
         <div
           className="absolute inset-0 rounded-full bg-[#FECE00] transition-all duration-200 ease-out pointer-events-none"

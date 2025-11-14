@@ -7,7 +7,7 @@ const Index = () => {
       <HeroSection />
       
       <main className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-2xl mx-auto space-y-8">
+        <div className="max-w-2xl mx-auto space-y-8 text-center">
           <h1 className="text-[40px] font-semibold text-[#181D27] leading-tight">
             Clara × London Build Expo
           </h1>
