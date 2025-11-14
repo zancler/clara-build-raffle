@@ -5,7 +5,7 @@ import rightLine from "@/assets/right_line.svg";
 
 export const HeroSection = () => {
   return (
-    <header className="relative bg-background border-b border-border overflow-hidden">
+    <header className="relative bg-transparent border-b border-border">
       {/* Decorative Lines */}
       <img 
         src={leftLine} 

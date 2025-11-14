@@ -113,7 +113,11 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(180deg, #E0F2FF 0%, #FFFFFF 45%, #FFFFFF 100%);
   }
 }
