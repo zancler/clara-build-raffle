@@ -57,6 +57,7 @@ export const RaffleForm = () => {
       toast({
         title: "You're in! 🎉",
         description: "Thanks for entering. We'll contact you after the show.",
+        className: "bg-white border-border",
       });
       setEmail("");
       setIsSubmitting(false);
