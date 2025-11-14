@@ -86,7 +86,7 @@ export const RaffleForm = () => {
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-6 flex flex-col items-center">
       <div className="w-full space-y-6">
         <Label htmlFor="email" className="block text-center text-base font-medium" style={{ fontFamily: 'Figtree' }}>
-          Your email address
+          Your email address<span className="text-red-500">*</span>
         </Label>
         <div className="relative">
           <Input
@@ -95,7 +95,7 @@ export const RaffleForm = () => {
             placeholder="business.name@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-500 ease-out focus:outline-none relative z-10 rounded-xl"
+            className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-700 ease-in-out focus:outline-none relative z-10 rounded-xl"
             style={{
               fontFamily: 'Figtree',
               color: '#71717A',
@@ -106,7 +106,7 @@ export const RaffleForm = () => {
             onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
             onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
           />
-          <div className="absolute inset-0 opacity-0 transition-opacity duration-500 ease-out pointer-events-none input-gradient-border" 
+          <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none input-gradient-border" 
                style={{
                  background: 'linear-gradient(90deg, #FDB022 0%, #82CA9C 33%, #E63888 66%, #FF4444 100%)',
                  padding: '2px',
