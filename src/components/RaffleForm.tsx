@@ -67,6 +67,7 @@ export const RaffleForm = () => {
     if (!buttonRef.current) return;
     
     const rect = buttonRef.current.getBoundingClientRect();
+    // Normalize to -1 to 1 range
     const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
     const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
     
@@ -125,16 +126,50 @@ export const RaffleForm = () => {
           ref={buttonRef}
           type="submit"
           disabled={isSubmitting}
-          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-all duration-500"
-          style={{
-            background: isHovered 
-              ? 'linear-gradient(135deg, #00BFD8 0%, #E63888 50%, #82CA9C 100%)'
-              : '#000000'
-          }}
+          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center bg-black transition-all duration-500"
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+          {/* Yellow layer */}
+          <div 
+            className="absolute inset-0 transition-all duration-200 ease-out"
+            style={{
+              background: '#FECE00',
+              opacity: isHovered ? 1 : 0,
+              transform: isHovered
+                ? `rotate(${4 + mousePosition.x * 2 + mousePosition.y * 2}deg) translate(${mousePosition.x * 1}px, ${mousePosition.y * 1}px)`
+                : 'rotate(4deg) translate(0, 0)',
+              mixBlendMode: 'darken',
+            }}
+          />
+          
+          {/* Cyan layer */}
+          <div 
+            className="absolute inset-0 transition-all duration-200 ease-out"
+            style={{
+              background: '#00C6CF',
+              opacity: isHovered ? 1 : 0,
+              transform: isHovered
+                ? `rotate(${-2 + mousePosition.x * 2 - mousePosition.y * 2}deg) translate(${-mousePosition.x * 1}px, ${mousePosition.y * 1}px)`
+                : 'rotate(-2deg) translate(0, 0)',
+              mixBlendMode: 'darken',
+            }}
+          />
+          
+          {/* Magenta layer */}
+          <div 
+            className="absolute inset-0 transition-all duration-200 ease-out"
+            style={{
+              background: '#FF33F1',
+              opacity: isHovered ? 1 : 0,
+              transform: isHovered
+                ? `rotate(${2 - mousePosition.x * 2 + mousePosition.y * 2}deg) translate(${mousePosition.x * 1}px, ${-mousePosition.y * 1}px)`
+                : 'rotate(2deg) translate(0, 0)',
+              mixBlendMode: 'darken',
+            }}
+          />
+          
           {/* Button content */}
           <div className="relative z-10 flex items-center gap-2 text-white">
             <span className="text-base font-medium" style={{ fontFamily: 'Figtree' }}>
