@@ -126,16 +126,19 @@ export const RaffleForm = () => {
           type="submit"
           disabled={isSubmitting}
           className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-          style={{
-            background: 'linear-gradient(135deg, #00BFD8 0%, #E63888 50%, #82CA9C 100%)'
-          }}
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {/* Animated overlay layers for interaction */}
+          {/* Animated background layers */}
           <div 
-            className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-all duration-300"
+            className="absolute inset-0 opacity-30 transition-opacity duration-300"
+            style={{
+              background: '#00BFD8'
+            }}
+          />
+          <div 
+            className="absolute inset-0 opacity-40 transition-all duration-300"
             style={{
               background: '#E63888',
               transform: isHovered 
@@ -144,7 +147,7 @@ export const RaffleForm = () => {
             }}
           />
           <div 
-            className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-all duration-500"
+            className="absolute inset-0 opacity-50 transition-all duration-500"
             style={{
               background: '#82CA9C',
               transform: isHovered 
