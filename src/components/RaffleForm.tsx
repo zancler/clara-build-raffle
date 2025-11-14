@@ -90,7 +90,7 @@ export const RaffleForm = () => {
           Your email address<span className="text-red-500">*</span>
         </Label>
         <div className="space-y-3">
-          <div className="relative">
+          <div className="relative input-wrapper">
             <Input
               id="email"
               type="email"
@@ -105,8 +105,6 @@ export const RaffleForm = () => {
               }}
               required
               maxLength={255}
-              onFocus={(e) => e.currentTarget.parentElement?.classList.add('input-focused')}
-              onBlur={(e) => e.currentTarget.parentElement?.classList.remove('input-focused')}
             />
             <div className="absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out pointer-events-none input-gradient-border" 
                  style={{
