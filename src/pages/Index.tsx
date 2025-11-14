@@ -21,7 +21,7 @@ const Index = () => {
             
             {/* Headline */}
             <h1 className="text-5xl font-semibold text-foreground" style={{ fontFamily: 'Figtree' }}>
-              Clara X London Build Expo
+              Clara × London Build Expo
             </h1>
             
             {/* Description */}
