@@ -7,7 +7,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-hero">
       <HeroSection />
       
-      <main className="container mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-24">
+      <main className="container mx-auto px-4 py-16 md:py-24" style={{ marginTop: '-20px' }}>
         <div className="max-w-2xl mx-auto text-center">
           {/* Block 1: Tag, Headline, Description */}
           <div className="space-y-6 mb-12">
