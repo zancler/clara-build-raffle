@@ -28,7 +28,7 @@ export const HeroSection = () => {
             alt="Clara" 
             className="h-8 md:h-14 lg:h-16 w-auto"
           />
-          <span className="text-3xl md:text-5xl lg:text-6xl font-light text-foreground">×</span>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-light text-foreground">✕</span>
           <img 
             src={londonBuildLogo} 
             alt="London Build 2025 Expo - 19-20 November, Olympia London" 
