@@ -101,7 +101,7 @@ export const RaffleForm = () => {
               className="h-14 text-sm md:text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-500 ease-in-out focus:outline-none relative z-10 rounded-xl"
               style={{
                 fontFamily: 'Figtree',
-                color: '#71717A',
+                color: '#A1A1AA',
                 backgroundClip: 'padding-box',
               }}
               required
