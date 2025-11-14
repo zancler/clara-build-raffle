@@ -125,34 +125,31 @@ export const RaffleForm = () => {
           ref={buttonRef}
           type="submit"
           disabled={isSubmitting}
-          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center bg-black transition-all duration-300 hover:bg-transparent"
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {/* Animated background layers */}
+          {/* Animated background layers - only visible on hover */}
           <div 
-            className="absolute inset-0 transition-opacity duration-300"
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             style={{
-              background: '#00BFD8',
-              opacity: 0.8
+              background: '#00BFD8'
             }}
           />
           <div 
-            className="absolute inset-0 transition-all duration-300"
+            className="absolute inset-0 opacity-0 group-hover:opacity-80 transition-all duration-300"
             style={{
               background: '#E63888',
-              opacity: 0.6,
               transform: isHovered 
                 ? `translate(${(mousePosition.x) * 10}px, ${(mousePosition.y) * 10}px)` 
                 : 'translate(0, 0)',
             }}
           />
           <div 
-            className="absolute inset-0 transition-all duration-500"
+            className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-all duration-500"
             style={{
               background: '#82CA9C',
-              opacity: 0.5,
               transform: isHovered 
                 ? `translate(${(mousePosition.x) * 15}px, ${(mousePosition.y) * 15}px)` 
                 : 'translate(0, 0)',
