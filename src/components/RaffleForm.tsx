@@ -87,7 +87,7 @@ export const RaffleForm = () => {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto flex flex-col items-center">
       <div className="w-full space-y-6">
-        <Label htmlFor="email" className="block text-center text-base font-medium" style={{ fontFamily: 'Figtree' }}>
+        <Label htmlFor="email" className="block text-center text-sm md:text-base font-medium" style={{ fontFamily: 'Figtree' }}>
           Your email address<span className="text-red-500">*</span>
         </Label>
         <div className="space-y-3">
@@ -98,7 +98,7 @@ export const RaffleForm = () => {
               placeholder="business.name@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="h-14 text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-500 ease-in-out focus:outline-none relative z-10 rounded-xl"
+              className="h-14 text-sm md:text-base bg-white border-2 border-[#E5E7EB] focus:border-transparent focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-500 ease-in-out focus:outline-none relative z-10 rounded-xl"
               style={{
                 fontFamily: 'Figtree',
                 color: '#71717A',
@@ -173,7 +173,7 @@ export const RaffleForm = () => {
           
           {/* Button content */}
           <div className="relative z-10 flex items-center gap-2 text-white">
-            <span className="text-base font-medium" style={{ fontFamily: 'Figtree' }}>
+            <span className="text-sm md:text-base font-medium" style={{ fontFamily: 'Figtree' }}>
               {isSubmitting ? "Submitting..." : "Enter the raffle"}
             </span>
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
