@@ -120,19 +120,54 @@ export const RaffleForm = () => {
         </p>
       </div>
 
-      <Button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full h-[60px] rounded-full text-base font-medium mt-12"
-        style={{
-          fontFamily: 'Figtree',
-          background: 'linear-gradient(135deg, #00BFD8 0%, #E63888 50%, #82CA9C 100%)',
-          border: 'none'
-        }}
-      >
-        {isSubmitting ? "Submitting..." : "Enter the raffle"}
-        <ArrowRight className="w-5 h-5 ml-2" />
-      </Button>
+      <div className="relative w-full mt-12">
+        <button
+          ref={buttonRef}
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full h-[60px] rounded-full overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {/* Animated background layers */}
+          <div 
+            className="absolute inset-0 transition-opacity duration-300"
+            style={{
+              background: '#00BFD8',
+              opacity: 0.8
+            }}
+          />
+          <div 
+            className="absolute inset-0 transition-all duration-300"
+            style={{
+              background: '#E63888',
+              opacity: 0.6,
+              transform: isHovered 
+                ? `translate(${(mousePosition.x) * 10}px, ${(mousePosition.y) * 10}px)` 
+                : 'translate(0, 0)',
+            }}
+          />
+          <div 
+            className="absolute inset-0 transition-all duration-500"
+            style={{
+              background: '#82CA9C',
+              opacity: 0.5,
+              transform: isHovered 
+                ? `translate(${(mousePosition.x) * 15}px, ${(mousePosition.y) * 15}px)` 
+                : 'translate(0, 0)',
+            }}
+          />
+          
+          {/* Button content */}
+          <div className="relative z-10 flex items-center gap-2 text-white">
+            <span className="text-base font-medium" style={{ fontFamily: 'Figtree' }}>
+              {isSubmitting ? "Submitting..." : "Enter the raffle"}
+            </span>
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </div>
+        </button>
+      </div>
     </form>
   );
 };
