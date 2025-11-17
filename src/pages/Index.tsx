@@ -39,12 +39,10 @@ const Index = () => {
           <p className="text-xs font-normal text-black" style={{ fontFamily: 'Figtree' }}>
             By entering you agree to the raffle{' '}
             <a 
-              href="#" 
+              href="https://clara-build-promo-terms.lovable.app" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="underline hover:no-underline"
-              onClick={(e) => {
-                e.preventDefault();
-                // Add your terms and conditions logic here
-              }}
             >
               Terms & Conditions
             </a>.
