@@ -4,7 +4,7 @@ import tagIcon from "@/assets/tag-icon.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-hero">
+    <div className="min-h-screen bg-gradient-hero overflow-x-hidden">
       <HeroSection />
       
       <main className="container mx-auto px-4 py-16 md:py-24 -mt-5 md:-mt-[60px]">
