@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 export const RaffleForm = () => {
   const [email, setEmail] = useState("");
@@ -52,16 +53,43 @@ export const RaffleForm = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const { error } = await supabase
+        .from('raffle_entries')
+        .insert([{ email: trimmedEmail }]);
+
+      if (error) {
+        // Check if it's a duplicate email error
+        if (error.code === '23505') {
+          toast({
+            title: "You're already entered! 🎉",
+            description: "This email is already in the raffle.",
+            className: "bg-white border-border",
+          });
+        } else {
+          toast({
+            title: "Oops! Something went wrong",
+            description: "Please try again in a moment.",
+            variant: "destructive",
+          });
+        }
+      } else {
+        toast({
+          title: "You're in! 🎉",
+          description: "Thanks for entering. We'll contact you after the show.",
+          className: "bg-white border-border",
+        });
+        setEmail("");
+      }
+    } catch (error) {
       toast({
-        title: "You're in! 🎉",
-        description: "Thanks for entering. We'll contact you after the show.",
-        className: "bg-white border-border",
+        title: "Connection error",
+        description: "Please check your internet and try again.",
+        variant: "destructive",
       });
-      setEmail("");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
