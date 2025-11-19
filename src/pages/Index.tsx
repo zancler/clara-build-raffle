@@ -56,7 +56,7 @@ const Index = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-semibold text-foreground mb-4" style={{ fontFamily: 'Figtree', fontSize: '32px' }}>
             Let's get in touch
           </h2>
