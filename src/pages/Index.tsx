@@ -50,8 +50,13 @@ const Index = () => {
           </p>
         </div>
 
+        {/* Separator Line */}
+        <div className="max-w-4xl mx-auto my-16">
+          <div className="h-px bg-[#0EA5E9]" />
+        </div>
+
         {/* Contact Section */}
-        <div className="max-w-2xl mx-auto text-center mt-24 mb-16">
+        <div className="max-w-2xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ fontFamily: 'Figtree' }}>
             Let's get in touch
           </h2>
