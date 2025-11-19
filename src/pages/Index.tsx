@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { RaffleForm } from "@/components/RaffleForm";
 import tagIcon from "@/assets/tag-icon.png";
+import { ArrowUpRight } from "lucide-react";
 
 const Index = () => {
   return (
@@ -47,6 +48,24 @@ const Index = () => {
               Terms & Conditions
             </a>.
           </p>
+        </div>
+
+        {/* Contact Section */}
+        <div className="max-w-2xl mx-auto text-center mt-24 mb-16">
+          <h2 className="text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ fontFamily: 'Figtree' }}>
+            Let's get in touch
+          </h2>
+          <p className="text-base font-normal text-foreground mb-6" style={{ fontFamily: 'Figtree' }}>
+            We'd love to hear from you. Reach out anytime at
+          </p>
+          <a 
+            href="mailto:hello@44pixels.ai"
+            className="inline-flex items-center gap-2 text-2xl md:text-3xl font-semibold text-foreground underline hover:no-underline transition-all"
+            style={{ fontFamily: 'Figtree' }}
+          >
+            hello@44pixels.ai
+            <ArrowUpRight className="w-6 h-6" />
+          </a>
         </div>
       </main>
     </div>
