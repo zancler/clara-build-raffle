@@ -51,7 +51,7 @@ const Index = () => {
         </div>
 
         {/* Separator Line */}
-        <div className="max-w-4xl mx-auto my-16">
+        <div className="max-w-4xl mx-auto my-12">
           <div className="h-px bg-[#E1F2FF]" />
         </div>
 
