@@ -52,21 +52,21 @@ const Index = () => {
 
         {/* Separator Line */}
         <div className="max-w-4xl mx-auto my-16">
-          <div className="h-px bg-[#0EA5E9]" />
+          <div className="h-px bg-[#E1F2FF]" />
         </div>
 
         {/* Contact Section */}
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ fontFamily: 'Figtree' }}>
+          <h2 className="font-semibold text-foreground mb-4" style={{ fontFamily: 'Figtree', fontSize: '32px' }}>
             Let's get in touch
           </h2>
-          <p className="text-base font-normal text-foreground mb-6" style={{ fontFamily: 'Figtree' }}>
+          <p className="font-normal text-foreground mb-6" style={{ fontFamily: 'Figtree', fontSize: '16px', lineHeight: '24px' }}>
             We'd love to hear from you. Reach out anytime at
           </p>
           <a 
             href="mailto:hello@44pixels.ai"
-            className="inline-flex items-center gap-2 text-2xl md:text-3xl font-semibold text-foreground underline hover:no-underline transition-all"
-            style={{ fontFamily: 'Figtree' }}
+            className="inline-flex items-center gap-2 font-semibold text-foreground underline hover:no-underline transition-all"
+            style={{ fontFamily: 'Figtree', fontSize: '32px', lineHeight: '48px' }}
           >
             hello@44pixels.ai
             <ArrowUpRight className="w-6 h-6" />
